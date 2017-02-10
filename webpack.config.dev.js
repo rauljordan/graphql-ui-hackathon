@@ -18,7 +18,6 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NoErrorsPlugin(),
 		new webpack.DefinePlugin({
 			'process.env': {
 				NODE_ENV: JSON.stringify('development')
@@ -35,7 +34,7 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.js$/,
-				loader: 'babel',
+				loader: 'babel-loader',
 				include: path.resolve(__dirname, 'src'),
 				query: {
 					presets: [ 'react-hmre' ]
@@ -43,12 +42,12 @@ module.exports = {
 			},
 			{
 				test: /\.css/,
-				loader: 'style!css',
+				loader: 'css-loader',
 				include: path.resolve(__dirname, 'src')
 			},
 			{
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        loader: 'file',
+        loader: 'file-loader',
 				include: path.resolve(__dirname, 'src'),
         query: {
           name: 'static/media/[name].[hash:8].[ext]'
@@ -60,7 +59,7 @@ module.exports = {
       },
       {
         test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,
-        loader: 'url',
+        loader: 'url-loader',
 				include: path.resolve(__dirname, 'src'),
         query: {
           limit: 10000,

@@ -2,6 +2,8 @@ import path from 'path';
 import express from 'express';
 import webpack from 'webpack';
 import proxy from 'http-proxy-middleware';
+import { match } from 'react-router';
+import routes from './src/routes';
 
 const app = express();
 
