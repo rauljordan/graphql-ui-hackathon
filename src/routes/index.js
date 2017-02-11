@@ -11,7 +11,7 @@ export default (
     component={Layout}
   >
       <IndexRoute
-        component={RelationalGraph}
+        component={Home}
       />
   </Route>
 );

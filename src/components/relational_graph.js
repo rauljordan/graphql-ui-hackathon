@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import * as d3 from 'd3'
 
 import miserables from '../../stuff/miserables';
+import '../styles.css';
 
 export default class RelationalGraph extends Component {
   componentDidMount(){
     doItUp();
   }
-
   render(){
     return (
       <div>

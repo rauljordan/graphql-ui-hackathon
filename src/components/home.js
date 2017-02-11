@@ -1,8 +1,11 @@
 import React from 'react';
+import RelationalGraph from './relational_graph';
 
 function Home() {
   return (
-    <div>Hello World</div>
+    <div>
+      <RelationalGraph/>
+    </div>
   );
 }
 
