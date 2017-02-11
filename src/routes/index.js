@@ -3,6 +3,7 @@ import { Route, IndexRoute } from 'react-router';
 
 import Layout from '../components/layout';
 import Home from '../components/home';
+import RelationalGraph from '../components/relational_graph';
 
 export default (
   <Route
@@ -10,7 +11,7 @@ export default (
     component={Layout}
   >
       <IndexRoute
-        component={Home}
+        component={RelationalGraph}
       />
   </Route>
 );
