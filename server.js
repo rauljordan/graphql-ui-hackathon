@@ -42,7 +42,7 @@ app.get('*', (req, res) => {
           <header>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="styles.css" />
+            <link rel="stylesheet" href="main.css" />
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
           </header>
           <body>

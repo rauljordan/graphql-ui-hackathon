@@ -1,6 +1,6 @@
-export default (text) => {
+export default (url) => {
   return {
     type: 'SCRAPE',
-    text
+    url
   }
 };

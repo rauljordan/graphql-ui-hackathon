@@ -1,7 +1,17 @@
-import { combineReducers } from 'redux';
 
-/**
- * This is what our global state tree looks like
- * @type {State}
- */
-export default {};
+const scrape = (state = [], action) => {
+  switch (action.type) {
+    case 'SCRAPE':
+      return [
+        ...state,
+        {
+          url: action.url
+        }
+      ]
+    default:
+      return state
+  }
+}
+
+
+export default scrape;
