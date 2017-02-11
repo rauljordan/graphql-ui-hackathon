@@ -21,7 +21,7 @@ export default class RelationalGraph extends Component {
                           /* D3 FUNCTION */
 //***************************************************************************//
 
-function doItUp() {
+function doItUp(data) {
   var svg = d3.select("svg"),
       width = +svg.attr("width"),
       height = +svg.attr("height");
