@@ -11,5 +11,15 @@ const query = gql`
 `;
 
 export default compose(
-  graphql(query)
+  graphql(query, {
+    options({
+      url
+    }) {
+      return {
+        variables: {
+          url
+        }
+      };
+    }
+  })
 )(RelationalGraph);
